@@ -1,0 +1,112 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Cabecera */
+.header-section .yellow-box {
+    background-color: #FFD200;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header-section .central-image img,
+.header-section .title-banner img {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Bloques de contenido */
+.content-section .project-block {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-section .project-block h2 {
+    font-size: 1.8rem;
+    color: #162A39;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-section .description-box {
+    background: #FFD200;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+}
+
+.content-section .description-box p {
+    margin-bottom: 10px;
+}
+
+.content-section .description-box ol {
+    padding-left: 20px;
+}
+
+.content-section .description-box ol li {
+    margin-bottom: 15px;
+}
+
+.content-section .description-box ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.content-section .description-box ul li {
+    margin-bottom: 5px;
+    list-style-type: disc;
+}
+
+.content-section .description-box ol li strong {
+    color: #162A39;
+}
+
+.content-section .action-button {
+    margin-top: 20px;
+    background-color: #00c853;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.content-section .action-button:hover {
+    background-color: #009624;
+}
+
+/* Pie de página */
+.footer-section {
+    background: #162A39;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section .social-media img {
+    width: 60px;
+    margin-top: 10px;
+}

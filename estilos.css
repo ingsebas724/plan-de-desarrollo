@@ -1,0 +1,156 @@
+/* General: Reset de márgenes y estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el body */
+body {
+    font-family: Arial, sans-serif;
+    background: url('img/trees.png') no-repeat center center fixed;
+    background-size: cover; /* Ajustamos el tamaño para cubrir toda la pantalla */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Logo en la esquina superior izquierda */
+.header-logo img {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+
+/* Texto en la esquina superior derecha */
+.header-text {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.header-text .italic-text {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.header-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Título principal */
+main h1 {
+    font-size: 7rem; /* Tamaño grande del título */
+    color: #162A39;
+    text-align: center;
+    line-height: 0.5; /* Interlineado más compacto */
+    text-transform: capitalize; /* Cada palabra empieza con mayúscula */
+    margin-bottom: 10px; /* Menor espacio debajo del título */
+    text-shadow: 2px 2px 0 #079CD2, -2px -2px 0 #079CD2, 
+                 2px -2px 0 #079CD2, -2px 2px 0 #079CD2; /* Delineado azul claro */
+}
+
+main h1 span {
+    display: block;
+}
+
+/* Colibrí posicionado junto al título */
+.decorative-colibri {
+    position: absolute;
+    top: -30px; /* Ajuste de la posición */
+    left: 55%; /* Posiciona sobre la palabra "De" */
+    width: 120px; /* Tamaño ajustado del colibrí */
+    height: auto;
+}
+.action-button {
+    display: flex; /* Usa flexbox para alinear */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente (si es necesario) */
+    margin-top: 70px; /* Ajusta el margen superior según sea necesario */
+}
+.btn {
+    background-color: #079CD2; /* Fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    padding: 15px 30px; /* Tamaño del botón */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    border-radius: 30px; /* Bordes redondeados */
+    text-align: center; /* Centrado del texto */
+    display: inline-block; /* Para que se vea como un botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Efecto al pasar el mouse */
+}
+
+.btn:hover {
+    background-color: #0578A1; /* Fondo más oscuro al pasar el cursor */
+}
+
+.action-button button {
+    background-color: #079CD2;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button button:hover {
+    background-color: #0578A1;
+}
+
+/* Texto de bienvenida */
+.welcome-text {
+    text-align: center; /* Centramos el texto */
+    margin-top: 60px; /* Más espacio debajo del botón */
+}
+
+.welcome-text p {
+    color: black; /* Color del texto */
+    -webkit-text-stroke: 0.5px white; /* Delineado en blanco */
+    font-size: 1.5em; /* Ajusta el tamaño del texto según sea necesario */
+    text-align: center; /* Centra el texto */
+    font-weight: bold; /* Hace el texto más destacado */
+}
+
+
+/* Responsividad: Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    .header-text p {
+        font-size: 0.9rem;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+    }
+
+    .decorative-colibri {
+        width: 100px;
+        left: 50%; /* Ajustar la posición relativa */
+    }
+
+    .action-button button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
