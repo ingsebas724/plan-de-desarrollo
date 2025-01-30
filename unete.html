@@ -38,10 +38,11 @@
             <div class="subscription-form">
                 <h3>¡Suscríbete!</h3>
                 <p>Recibe las últimas noticias y actualizaciones.</p>
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                <form id="subscriptionForm" action="guardar_suscripcion.php" method="post">
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
                     <button type="submit">Suscribirse</button>
                 </form>
+                <p id="responseMessage" style="display: none;"></p> <!-- Mensaje de respuesta -->
             </div>
         </div>
     </section>
