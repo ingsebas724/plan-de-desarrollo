@@ -1,8 +1,7 @@
 <?php
 // Configuración de la base de datos
-$servername = "Local instance MySQL80"; // Servidor de la base de datos
+$servername = "formulario"; // Servidor de la base de datos
 $username = "root"; // Usuario de la base de datos
-$password = "123Sebas."; // Contraseña de la base de datos
 $dbname = "suscripciones"; // Nombre de la base de datos
 
 // Crear conexión
