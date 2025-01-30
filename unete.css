@@ -458,3 +458,58 @@ body {
     background-color: #FFC107; /* Amarillo más oscuro */
     color: #000; /* Texto negro */
 }
+/* Estilos generales */
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el contenido adicional */
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.banner-content img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para el contenido adicional (CTA, imagen decorativa, texto, formulario) */
+.banner-cta, .decorative-image, .highlight-text, .subscription-form {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 250px; /* Ancho mínimo para evitar que se haga muy pequeño */
+    text-align: center;
+    margin-top: 20px; /* Espacio superior en pantallas pequeñas */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+        gap: 10px; /* Reduce el espacio entre elementos */
+    }
+
+    .banner-cta, .decorative-image, .highlight-text, .subscription-form {
+        margin-top: 10px; /* Reduce el margen superior en pantallas pequeñas */
+    }
+
+    .yellow-box h1 {
+        font-size: 28px; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .yellow-box p {
+        font-size: 20px; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .yellow-box h1 {
+        font-size: 24px; /* Tamaño más pequeño para móviles */
+    }
+
+    .yellow-box p {
+        font-size: 18px; /* Tamaño más pequeño para móviles */
+    }
+
+    .banner-cta, .decorative-image, .highlight-text, .subscription-form {
+        min-width: 100%; /* Ocupa todo el ancho en pantallas muy pequeñas */
+    }
+}
