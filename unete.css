@@ -621,3 +621,21 @@ body {
         min-width: 100%; /* Ocupa todo el ancho en pantallas muy pequeñas */
     }
 }
+/* Estilos generales para el logo */
+.logo img {
+    max-width: 120px; /* Tamaño original del logo */
+    height: auto;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 80px; /* Logo más pequeño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 60px; /* Logo aún más pequeño en móviles muy pequeños */
+    }
+}
