@@ -1,3 +1,14 @@
+/* Variables Globales */
+:root {
+    --primary-yellow: #FFD200;
+    --primary-blue: #162A39;
+    --secondary-blue: #079CD2;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --default-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s ease;
+}
+
 /* General: Reset y configuración base */
 @font-face {
     font-family: 'Poppins';
@@ -6,7 +17,8 @@
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
     unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +26,9 @@
 }
 
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #f9f9f9; /* Color de fondo general */
-    color: #333;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
@@ -30,60 +42,72 @@ body {
     width: 100%;
 }
 
-/* Estilos para la sección del banner */
+/* Banner Section */
 .banner {
-    font-family: 'Playwrite', sans-serif; /* Fuente Bebas Neue */
-    position: relative; /* Permite posicionar elementos dentro del banner */
-    width: 100%; /* Toma todo el ancho disponible */
+    position: relative;
+    width: 100%;
 }
 
-/* Cuadro amarillo */
 .yellow-box {
-    background-color: #FFD200; /* Fondo amarillo */
-    padding: 10px 20px; /* Ajuste del espacio interno */
+    background-color: var(--primary-yellow);
+    padding: 10px 20px;
     position: relative;
     z-index: 1;
     border-radius: 5px;
-    width: auto; /* Ajusta el tamaño automáticamente al contenido */
     max-width: 100%;
-    margin: 0 auto; /* Centra horizontalmente */
-    margin-bottom: 0; /* Elimina cualquier margen debajo del cuadro */
+    margin: 0 auto 0;
 }
 
 .yellow-box h1 {
-    font-family: 'Playwrite', sans-serif; /* Fuente Bebas Neue */
-    font-size: 48px; /* Tamaño de letra */
-    color: #162A39; /* Azul oscuro */
-    margin-bottom: 5px; /* Espaciado entre el título principal y el subtítulo */
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
     text-align: left;
 }
 
 .yellow-box p {
-    font-family: 'Roboto', sans-serif; /* Fuente Bebas Neue */
-    font-size: 48px; /* Tamaño de letra */
-    color: #ffffff; /* Color blanco */
+    font-size: 24px;
+    color: #fff;
     margin: 0;
     text-align: left;
 }
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 120px;
+    border-radius: 10px;
+}
+
+.image-below {
+    width: calc(100% - 40px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: -80px;
+    border-radius: 5px;
+}
+
+/* Video and Alcalde Section */
 .video-alcalde-section {
     display: flex;
-    flex-wrap: wrap; /* Permite que se adapte en pantallas pequeñas */
-    gap: 20px; /* Espaciado entre las columnas */
+    flex-wrap: wrap;
+    gap: 20px;
     margin: 40px auto;
-    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    align-items: flex-start;
     padding: 20px;
 }
 
-/* Estilo para el contenedor del video */
 .video-container {
-    flex: 2; /* Ocupa más espacio que la columna del alcalde */
+    flex: 2;
     text-align: center;
 }
 
 .video-container h2 {
-    font-family: 'Poppins', sans-serif;
     font-size: 2rem;
-    color: #162A39;
+    color: var(--primary-blue);
     margin-bottom: 20px;
 }
 
@@ -92,180 +116,95 @@ body {
     border-radius: 10px;
 }
 
-/* Estilo para el cuadro del alcalde */
 .alcalde-container {
-    flex: 1; /* Ocupa menos espacio que el video */
+    flex: 1;
 }
 
 .alcalde-box {
-    background-color: #FFD200; /* Fondo amarillo */
+    background-color: var(--primary-yellow);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    box-shadow: var(--default-shadow);
 }
 
-/* Foto del alcalde */
 .alcalde-photo {
-    width: 100%; /* Asegura que ocupe el ancho del contenedor */
-    max-width: 200px; /* Tamaño máximo */
-    border-radius: 10px; /* Bordes redondeados */
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
-/* Descripción del alcalde */
 .alcalde-description h3 {
-    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    color: #162A39;
+    color: var(--primary-blue);
     margin-bottom: 10px;
 }
 
 .alcalde-description p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.5;
     margin-bottom: 10px;
 }
 
 .alcalde-description a {
-    color: #162A39; /* Azul oscuro */
+    color: var(--primary-blue);
     text-decoration: none;
     font-weight: bold;
+    transition: color var(--transition-speed);
 }
 
 .alcalde-description a:hover {
     text-decoration: underline;
 }
-.banner img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 120px; /* Ajustamos para que quede debajo del cuadro amarillo */
-    border-radius: 10px; /* Bordes redondeados */
-}
-.image-below {
-    width: calc(100% - 40px); /* Ajusta el ancho al cuadro amarillo */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    display: block; /* Comportamiento de bloque */
-    position: relative; /* Permite ajustar la posición manualmente */
-    top: -80px; /* Subimos la imagen 10px más cerca del cuadro amarillo */
-    border-radius: 5px; /* Bordes redondeados opcionales */
-}
 
+/* Themes Section */
 .themes {
     text-align: center;
-    margin-top: 40px; /* Separación desde la parte superior */
+    margin-top: 40px;
     padding: 20px;
 }
 
 .themes-header h2 {
-    font-family: 'Poppins', sans-serif; /* Fuente moderna */
-    font-size: 2.5rem; /* Tamaño grande para el título */
-    color: #162A39; /* Azul oscuro */
-    margin-bottom: 10px; /* Espaciado con la descripción */
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
 }
 
 .themes-header p {
-    font-family: 'Roboto', sans-serif; /* Fuente complementaria para el texto */
-    font-size: 1rem; /* Tamaño más pequeño */
-    color: #555; /* Gris oscuro */
-    margin-bottom: 20px; /* Espaciado con las secciones */
-    line-height: 1.5; /* Mejora la legibilidad */
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
-/* Estilos para la sección del objetivo */
+
+/* Objective Section */
 .objective {
     display: flex;
-    flex-wrap: wrap; /* Asegura que se adapte en pantallas pequeñas */
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 20px;
     padding: 20px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--default-shadow);
 }
 
 .objective .text {
     flex: 1;
     padding: 20px;
 }
-.banner-image {
-    width: 1557px; /* Ancho fijo */
-    height: 494px; /* Alto fijo */
-    margin-top: 120px; /* Separación con el cuadro amarillo */
-    border-radius: 10px; /* Bordes redondeados */
-    display: block; /* Aseguramos que sea un bloque independiente */
-    margin-left: auto;
-    margin-right: auto; /* Centrar horizontalmente */
-}
+
 .objective .text h2 {
     font-size: 2rem;
-    color: #FFD200; /* Amarillo del diseño */
+    color: var(--primary-yellow);
     margin-bottom: 10px;
 }
-/* Contenedor de todas las secciones */
-.sections {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las secciones se adapten en pantallas pequeñas */
-    justify-content: center; /* Centra horizontalmente las secciones */
-    gap: 20px; /* Espaciado entre los elementos */
-    margin-top: 40px; /* Espaciado superior */
-}
-
-/* Cada sección (rectángulo azul) */
-.section {
-    background-color: #079CD2; /* Fondo azul */
-    border-radius: 10px; /* Bordes redondeados */
-    width: 200px; /* Ancho del rectángulo */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centra el contenido */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-}
-
-/* Círculo con imagen */
-.circle {
-    width: 100px; /* Ancho del círculo */
-    height: 100px; /* Alto del círculo */
-    background-color: #fff; /* Fondo blanco */
-    border-radius: 50%; /* Hace que el contenedor sea un círculo */
-    margin: 0 auto 10px; /* Centra el círculo y agrega espacio debajo */
-    overflow: hidden; /* Asegura que la imagen no se salga del círculo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle img {
-    width: 100%; /* La imagen ocupa todo el círculo */
-    height: 100%; /* La imagen ocupa todo el círculo */
-    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
-}
-
-/* Botón ovalado */
-.oval-button {
-    display: inline-block;
-    background-color: #FFD200; /* Fondo amarillo */
-    color: #162A39; /* Texto azul oscuro */
-    font-size: 14px; /* Tamaño del texto */
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none; /* Elimina el subrayado */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 30px; /* Hace el botón ovalado */
-    margin-top: 10px; /* Espaciado superior */
-    transition: background-color 0.3s ease; /* Transición suave al pasar el cursor */
-}
-
-.oval-button:hover {
-    background-color: #FFC107; /* Cambia a un amarillo más oscuro al pasar el cursor */
-    color: #000; /* Texto negro al hacer hover */
-}
-
 
 .objective .text p {
     font-size: 1.1rem;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
@@ -280,7 +219,7 @@ body {
 }
 
 .objective .text ul li strong {
-    color: #162A39; /* Azul oscuro para los puntos destacados */
+    color: var(--primary-blue);
 }
 
 .objective .image {
@@ -295,16 +234,70 @@ body {
     border-radius: 10px;
 }
 
-/* Estilos para la sección de contacto */
-.contact {
-    background: #162A39; /* Azul oscuro */
-    color: #fff;
-    padding: 20px; /* Espaciado interno */
-    margin-top: 40px; /* Más separación del contenido superior */
-    margin-bottom: 0; /* Evita desbordamiento hacia abajo */
+/* Sections */
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.section {
+    background-color: var(--secondary-blue);
     border-radius: 10px;
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Considera el padding en el tamaño total */
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--default-shadow);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.oval-button {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    color: var(--primary-blue);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 10px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.oval-button:hover {
+    background-color: #FFC107;
+    color: #000;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--primary-blue);
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact .contact-info {
@@ -317,16 +310,26 @@ body {
 }
 
 .contact .social-media {
-    margin-top: 10px; /* Separación con la descripción de contacto */
-    text-align: left; /* Alinea el contenido a la izquierda */
+    margin-top: 10px;
+    text-align: left;
 }
 
 .contact .social-media a img {
     width: 60px;
     height: 60px;
 }
-.contact .social-media a img {
-    width: 60px;
-    height: 60px;
-}
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .video-alcalde-section {
+        flex-direction: column;
+    }
+
+    .alcalde-photo {
+        max-width: 150px;
+    }
+
+    .banner img {
+        margin-top: 60px;
+    }
+}
