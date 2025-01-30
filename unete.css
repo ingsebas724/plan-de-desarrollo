@@ -1,12 +1,10 @@
+/* Logo más pequeño */
+.logo img {
+    max-width: 100px; /* Ajusta este valor según lo que necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+Enviaste
 /* General: Reset y configuración base */
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
-    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
 * {
     margin: 0;
     padding: 0;
@@ -15,14 +13,14 @@
 
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #f9f9f9; /* Color de fondo general */
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding-top: 100px; /* Añadido para evitar superposición con el header */
 }
 
 .container {
@@ -30,150 +28,141 @@ body {
     width: 100%;
 }
 
-/* Estilos para la sección del banner */
-.banner {
-    font-family: 'Playwrite', sans-serif; /* Fuente Bebas Neue */
-    position: relative; /* Permite posicionar elementos dentro del banner */
-    width: 100%; /* Toma todo el ancho disponible */
+/* Header: Logo y enlaces de acción */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de todo */
+    height: 80px; /* Altura fija del header */
 }
 
-/* Cuadro amarillo */
+/* Logo más pequeño */
+.logo img {
+    max-width: 100px; /* Ajustado a 100px (cambia este valor si lo necesitas) */
+    height: auto;
+}
+
+.action-links {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.action-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #162A39;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #FFD200;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-links a:hover {
+    background-color: #FFC107;
+    color: #000;
+}
+
+/* Banner y cuadro amarillo */
+.banner {
+    font-family: 'Playwrite', sans-serif;
+    position: relative;
+    width: 100%;
+    margin-top: 20px; /* Ajuste para evitar superposición con el header */
+    z-index: 1; /* Asegura que el banner esté debajo del header */
+}
+
 .yellow-box {
-    background-color: #FFD200; /* Fondo amarillo */
-    padding: 10px 20px; /* Ajuste del espacio interno */
+    background-color: #FFD200;
+    padding: 10px 20px;
     position: relative;
     z-index: 1;
     border-radius: 5px;
-    width: auto; /* Ajusta el tamaño automáticamente al contenido */
+    width: auto;
     max-width: 100%;
-    margin: 0 auto; /* Centra horizontalmente */
-    margin-bottom: 0; /* Elimina cualquier margen debajo del cuadro */
+    margin: 0 auto;
+    margin-bottom: 0;
 }
 
 .yellow-box h1 {
-    font-family: 'Playwrite', sans-serif; /* Fuente Bebas Neue */
-    font-size: 48px; /* Tamaño de letra */
-    color: #162A39; /* Azul oscuro */
-    margin-bottom: 5px; /* Espaciado entre el título principal y el subtítulo */
+    font-family: 'Playwrite', sans-serif;
+    font-size: 48px;
+    color: #162A39;
+    margin-bottom: 5px;
     text-align: left;
 }
 
 .yellow-box p {
-    font-family: 'Roboto', sans-serif; /* Fuente Bebas Neue */
-    font-size: 48px; /* Tamaño de letra */
-    color: #ffffff; /* Color blanco */
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    color: #ffffff;
     margin: 0;
     text-align: left;
 }
-.video-alcalde-section {
-    display: flex;
-    flex-wrap: wrap; /* Permite que se adapte en pantallas pequeñas */
-    gap: 20px; /* Espaciado entre las columnas */
-    margin: 40px auto;
-    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
-    padding: 20px;
-}
 
-/* Estilo para el contenedor del video */
-.video-container {
-    flex: 2; /* Ocupa más espacio que la columna del alcalde */
-    text-align: center;
-}
-
-.video-container h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    color: #162A39;
-    margin-bottom: 20px;
-}
-
-.video-container video {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* Estilo para el cuadro del alcalde */
-.alcalde-container {
-    flex: 1; /* Ocupa menos espacio que el video */
-}
-
-.alcalde-box {
-    background-color: #FFD200; /* Fondo amarillo */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-}
-
-/* Foto del alcalde */
-.alcalde-photo {
-    width: 100%; /* Asegura que ocupe el ancho del contenedor */
-    max-width: 200px; /* Tamaño máximo */
-    border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 20px;
-}
-
-/* Descripción del alcalde */
-.alcalde-description h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    color: #162A39;
-    margin-bottom: 10px;
-}
-
-.alcalde-description p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-.alcalde-description a {
-    color: #162A39; /* Azul oscuro */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.alcalde-description a:hover {
-    text-decoration: underline;
-}
 .banner img {
     max-width: 100%;
     height: auto;
-    margin-top: 120px; /* Ajustamos para que quede debajo del cuadro amarillo */
-    border-radius: 10px; /* Bordes redondeados */
-}
-.image-below {
-    width: calc(100% - 40px); /* Ajusta el ancho al cuadro amarillo */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    display: block; /* Comportamiento de bloque */
-    position: relative; /* Permite ajustar la posición manualmente */
-    top: -80px; /* Subimos la imagen 10px más cerca del cuadro amarillo */
-    border-radius: 5px; /* Bordes redondeados opcionales */
+    margin-top: 20px; /* Ajuste para evitar superposición */
+    border-radius: 10px;
 }
 
-.themes {
-    text-align: center;
-    margin-top: 40px; /* Separación desde la parte superior */
-    padding: 20px;
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .yellow-box h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .yellow-box p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .action-links {
+        gap: 10px;
+    }
+
+    .action-links a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
 
-.themes-header h2 {
-    font-family: 'Poppins', sans-serif; /* Fuente moderna */
-    font-size: 2.5rem; /* Tamaño grande para el título */
-    color: #162A39; /* Azul oscuro */
-    margin-bottom: 10px; /* Espaciado con la descripción */
+@media (max-width: 480px) {
+    .yellow-box h1 {
+        font-size: 24px;
+    }
+
+    .yellow-box p {
+        font-size: 18px;
+    }
+
+    .action-links {
+        gap: 5px;
+    }
+
+    .action-links a {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
 }
 
-.themes-header p {
-    font-family: 'Roboto', sans-serif; /* Fuente complementaria para el texto */
-    font-size: 1rem; /* Tamaño más pequeño */
-    color: #555; /* Gris oscuro */
-    margin-bottom: 20px; /* Espaciado con las secciones */
-    line-height: 1.5; /* Mejora la legibilidad */
-}
+/* -------------------------------------------------------------------------- */
+/* A partir de aquí, el código CSS es idéntico al primer archivo que me enviaste */
+/* -------------------------------------------------------------------------- */
+
 /* Estilos para la sección del objetivo */
 .objective {
     display: flex;
@@ -190,78 +179,12 @@ body {
     flex: 1;
     padding: 20px;
 }
-.banner-image {
-    width: 1557px; /* Ancho fijo */
-    height: 494px; /* Alto fijo */
-    margin-top: 120px; /* Separación con el cuadro amarillo */
-    border-radius: 10px; /* Bordes redondeados */
-    display: block; /* Aseguramos que sea un bloque independiente */
-    margin-left: auto;
-    margin-right: auto; /* Centrar horizontalmente */
-}
+
 .objective .text h2 {
     font-size: 2rem;
     color: #FFD200; /* Amarillo del diseño */
     margin-bottom: 10px;
 }
-/* Contenedor de todas las secciones */
-.sections {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las secciones se adapten en pantallas pequeñas */
-    justify-content: center; /* Centra horizontalmente las secciones */
-    gap: 20px; /* Espaciado entre los elementos */
-    margin-top: 40px; /* Espaciado superior */
-}
-
-/* Cada sección (rectángulo azul) */
-.section {
-    background-color: #079CD2; /* Fondo azul */
-    border-radius: 10px; /* Bordes redondeados */
-    width: 200px; /* Ancho del rectángulo */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centra el contenido */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-}
-
-/* Círculo con imagen */
-.circle {
-    width: 100px; /* Ancho del círculo */
-    height: 100px; /* Alto del círculo */
-    background-color: #fff; /* Fondo blanco */
-    border-radius: 50%; /* Hace que el contenedor sea un círculo */
-    margin: 0 auto 10px; /* Centra el círculo y agrega espacio debajo */
-    overflow: hidden; /* Asegura que la imagen no se salga del círculo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle img {
-    width: 100%; /* La imagen ocupa todo el círculo */
-    height: 100%; /* La imagen ocupa todo el círculo */
-    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
-}
-
-/* Botón ovalado */
-.oval-button {
-    display: inline-block;
-    background-color: #FFD200; /* Fondo amarillo */
-    color: #162A39; /* Texto azul oscuro */
-    font-size: 14px; /* Tamaño del texto */
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none; /* Elimina el subrayado */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 30px; /* Hace el botón ovalado */
-    margin-top: 10px; /* Espaciado superior */
-    transition: background-color 0.3s ease; /* Transición suave al pasar el cursor */
-}
-
-.oval-button:hover {
-    background-color: #FFC107; /* Cambia a un amarillo más oscuro al pasar el cursor */
-    color: #000; /* Texto negro al hacer hover */
-}
-
 
 .objective .text p {
     font-size: 1.1rem;
@@ -324,4 +247,214 @@ body {
 .contact .social-media a img {
     width: 60px;
     height: 60px;
+}
+
+/* Contenedor de todas las secciones */
+.sections {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las secciones se adapten en pantallas pequeñas */
+    justify-content: center; /* Centra horizontalmente las secciones */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin-top: 40px; /* Espaciado superior */
+}
+
+/* Cada sección (rectángulo azul) */
+.section {
+    background-color: #079CD2; /* Fondo azul */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 200px; /* Ancho del rectángulo */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+/* Círculo con imagen */
+.circle {
+    width: 100px; /* Ancho del círculo */
+    height: 100px; /* Alto del círculo */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 50%; /* Hace que el contenedor sea un círculo */
+    margin: 0 auto 10px; /* Centra el círculo y agrega espacio debajo */
+    overflow: hidden; /* Asegura que la imagen no se salga del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 100%; /* La imagen ocupa todo el círculo */
+    height: 100%; /* La imagen ocupa todo el círculo */
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
+}
+
+/* Botón ovalado */
+.oval-button {
+    display: inline-block;
+    background-color: #FFD200; /* Fondo amarillo */
+    color: #162A39; /* Texto azul oscuro */
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 30px; /* Hace el botón ovalado */
+    margin-top: 10px; /* Espaciado superior */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+.oval-button:hover {
+    background-color: #FFC107; /* Cambia a un amarillo más oscuro al pasar el cursor */
+    color: #000; /* Texto negro al hacer hover */
+}
+/* Sección de video y alcalde */
+.video-alcalde-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que se adapte en pantallas pequeñas */
+    gap: 20px; /* Espaciado entre las columnas */
+    margin: 40px auto;
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    padding: 20px;
+}
+
+/* Contenedor del video (izquierda) */
+.video-container {
+    flex: 2; /* Ocupa más espacio que la columna del alcalde */
+    text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+.video-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #162A39;
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Contenedor del alcalde (derecha) */
+.alcalde-container {
+    flex: 1; /* Ocupa menos espacio que el video */
+}
+
+.alcalde-box {
+    background-color: #FFD200; /* Fondo amarillo */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+/* Foto del alcalde */
+.alcalde-photo {
+    width: 100%; /* Asegura que ocupe el ancho del contenedor */
+    max-width: 200px; /* Tamaño máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px;
+}
+
+/* Descripción del alcalde */
+.alcalde-description h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #162A39;
+    margin-bottom: 10px;
+}
+
+.alcalde-description p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.alcalde-description a {
+    color: #162A39; /* Azul oscuro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.alcalde-description a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección de temas */
+.themes {
+    text-align: center; /* Centra todo el contenido de la sección */
+    margin-top: 40px; /* Separación desde la parte superior */
+    padding: 20px;
+}
+
+.themes-header {
+    max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+.themes-header h2 {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    color: #162A39; /* Azul oscuro */
+    margin-bottom: 10px; /* Espaciado con la descripción */
+}
+
+.themes-header p {
+    font-family: 'Roboto', sans-serif; /* Fuente complementaria para el texto */
+    font-size: 1rem; /* Tamaño más pequeño */
+    color: #555; /* Gris oscuro */
+    margin-bottom: 20px; /* Espaciado con las secciones */
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el formulario */
+}
+
+.subscription-form {
+    max-width: 300px; /* Ajusta el ancho según sea necesario */
+    text-align: center;
+}
+
+.subscription-form h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #162A39; /* Azul oscuro */
+    margin-bottom: 10px;
+}
+
+.subscription-form p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555; /* Gris oscuro */
+    margin-bottom: 15px;
+}
+
+.subscription-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.subscription-form button {
+    background-color: #FFD200; /* Amarillo */
+    color: #162A39; /* Azul oscuro */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subscription-form button:hover {
+    background-color: #FFC107; /* Amarillo más oscuro */
+    color: #000; /* Texto negro */
 }

@@ -1,4 +1,4 @@
-!DOCTYPE html>
+
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -15,13 +15,36 @@
     <!-- Contenedor principal -->
     <div class="container">
         <!-- Sección 1: Título principal y banner -->
-        <section class="banner">
-            <div class="yellow-box">
-                <h1>Portal de Transparencia y Participación Ciudadana de Otanche</h1>
-                <p>Desarrollo Gobernable, Transparente y Sostenible</p>
-            </div>
+       <!-- Encabezado con logo y enlaces de acción -->
+    <header class="header">
+        <div class="action-links">
+            <a href="#participa">YO PARTICIPO</a>
+            <a href="#contacto">CONTACTO</a>
+            <a href="https://wa.me/tu_numero" target="_blank">CHATEA</a>
+        </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Alcaldía de Otanche">
+        </div>
+    </header>
+    
+    <!-- Sección 1: Título principal y banner -->
+    <section class="banner">
+        <div class="yellow-box">
+            <h1>Portal de Transparencia y Participación Ciudadana de Otanche</h1>
+            <p>Desarrollo Gobernable, Transparente y Sostenible</p>
+        </div>
+        <div class="banner-content">
             <img src="img/principal.png" alt="Portada de Otanche" class="image-below">
-        </section>
+            <div class="subscription-form">
+                <h3>¡Suscríbete!</h3>
+                <p>Recibe las últimas noticias y actualizaciones.</p>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
         <section class="video-alcalde-section">
             <div class="video-container">
                 <h2>Himno de Otanche</h2>
@@ -98,7 +121,6 @@
                 </div>
             </div>
         </section>
-        
         
         <!-- Sección 3: Información de contacto -->
         <section class="contact">
