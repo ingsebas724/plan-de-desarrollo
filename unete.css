@@ -639,3 +639,65 @@ body {
         max-width: 60px; /* Logo aún más pequeño en móviles muy pequeños */
     }
 }
+/* Estilos para el mensaje de confirmación */
+.hidden {
+    display: none; /* Oculta el mensaje por defecto */
+}
+
+#confirmationMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green; /* Color verde para el mensaje de éxito */
+}
+
+/* Estilos para el formulario */
+.subscription-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.subscription-form h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #162A39;
+    margin-bottom: 10px;
+}
+
+.subscription-form p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.subscription-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.subscription-form button {
+    background-color: #FFD200; /* Amarillo */
+    color: #162A39; /* Azul oscuro */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subscription-form button:hover {
+    background-color: #FFC107; /* Amarillo más oscuro */
+    color: #000; /* Texto negro */
+}

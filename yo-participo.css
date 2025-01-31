@@ -1,0 +1,169 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #FFD200;
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+.action-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #162A39;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.action-links a:hover {
+    color: #FFD200;
+}
+
+/* Portada */
+.cover {
+    background-image: url('img/portada-yo-participo.jpg'); /* Imagen de portada */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.cover-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.cover-content p {
+    font-size: 1.5rem;
+}
+
+/* Contenido */
+.content {
+    margin-bottom: 40px;
+}
+
+.content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #162A39;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Formulario de Google Forms */
+.form-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #162A39;
+    margin-bottom: 20px;
+}
+
+.form-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FFD200;
+    color: #162A39;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #FFC107;
+    color: #000;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #FFD200;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+/* Portada */
+.cover {
+    position: relative;
+    height: 400px; /* Altura de la portada */
+    margin-bottom: 40px;
+    overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+.cover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+}
+
+.cover-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #FFD200; /* Texto amarillo */
+}
+
+.cover-content p {
+    font-size: 1.5rem;
+    color: #fff; /* Texto blanco */
+}
